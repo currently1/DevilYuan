@@ -32,3 +32,14 @@ class DyStockBackTestingMainEngine(object):
 
     def setProcessMode(self, mode):
         self._strategyEngine.setProcessMode(mode)
+
+
+# if __name__ == "__main__":
+# # try to run backTestingMainEngine    
+#         DyBackTestingMainEngine = DyStockBackTestingMainEngine()
+#         # set thredMode   
+#         DyBackTestingMainEngine.setThreadMode()
+#         # set ProcessMode
+#         # self._mainEngine.setProcessMode(text)
+
+        
