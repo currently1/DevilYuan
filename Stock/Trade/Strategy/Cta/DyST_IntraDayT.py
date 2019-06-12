@@ -36,7 +36,7 @@ class DyST_IntraDayT(DyStockCtaTemplate):
     #targetCode = DyStockCommon.etf50 # 50ETF是2005.02上市的
     #targetCode = DyStockCommon.etf300 # 300ETF是2012.05上市的
     #targetCode = DyStockCommon.etf500 # 500ETF是2013.03上市的
-    targetCode = '002722.SZ'
+    targetCode = '000001.SZ'
 
     bufSize = 100
 

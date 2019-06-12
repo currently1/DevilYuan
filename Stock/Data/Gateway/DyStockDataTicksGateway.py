@@ -18,7 +18,7 @@ from EventEngine.DyEvent import *
 from ..DyStockDataCommon import *
 from ...Common.DyStockCommon import *
 from .DyStockDataTdx import DyStockDataTdx
-
+from .DyStockDataTinyConfig import *
 
 class DyStockDataTicksGateway(object):
     """
@@ -187,7 +187,36 @@ class DyStockDataTicksGateway(object):
             else:
                 return df
         raise ex
+#----------------------------------------------------
+    # def _getTickDataFromTiny(code=None, date=None, retry=3, pause=0.001):
+    #       """
+    #         从天软获取分笔数据
+    #         网易的分笔数据只有最近5日的
+    #         接口和返回的DF，保持跟tushare一致
+    #     Parameters
+    #     ------
+    #         code:string
+    #                     股票代码 e.g. 600848
+    #         date:string
+    #                     日期 format：YYYY-MM-DD
+    #         retry : int, 默认 3
+    #                     如遇网络等问题重复执行的次数
+    #         pause : int, 默认 0
+    #                     重复请求数据过程中暂停的秒数，防止请求间隔时间太短出现的问题
+    #         return
+    #         -------
+    #         DataFrame 当日所有股票交易数据(DataFrame)
+    #                 属性:成交时间、成交价格、价格变动，成交手、成交金额(元)，买卖类型
+    #     """
+    #     tsl_login()
+    #     test = get_code()
+    #     data = get_data(code,date)
+    #     return data 
 
+
+
+
+#--------------------------------------------------------        
     def _getTicks(self, code, date):
         """
             get history ticks data from network
